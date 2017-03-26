@@ -5,14 +5,14 @@ describe S3DirectUpload::UploadHelper::S3Uploader do
 
     describe "starts-with $key" do
       it "is configurable with the key_starts_with option" do
-        key_starts_with = "uploads/"
+        key_starts_with = "uploads/originals/"
         s3_uploader = S3DirectUpload::UploadHelper::S3Uploader.new({:key_starts_with => key_starts_with})
         s3_uploader.policy_data[:conditions].should include ["starts-with", "$key", key_starts_with]
       end
 
-      it "defaults to 'uploads/'" do
+      it "defaults to 'uploads/originals/'" do
         s3_uploader = S3DirectUpload::UploadHelper::S3Uploader.new({})
-        s3_uploader.policy_data[:conditions].should include ["starts-with", "$key", "uploads/"]
+        s3_uploader.policy_data[:conditions].should include ["starts-with", "$key", "uploads/originals/"]
       end
     end
 
