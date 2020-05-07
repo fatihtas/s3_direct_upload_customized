@@ -55,7 +55,7 @@ $.fn.S3Uploader = (options) ->
       imageQuality: 80
       imageMaxWidth: 1600  # 1600
       imageMaxHeight: 1600 # 1600
-      imageOrientation: false
+      imageOrientation: none
       # imageCrop: false
       acceptFileTypes: /(\.|\/)(gif|jpe?g|png|webp)$/i
       
