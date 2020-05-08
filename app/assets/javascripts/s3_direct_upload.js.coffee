@@ -58,6 +58,7 @@ $.fn.S3Uploader = (options) ->
       imageOrientation: true
       disableImageMetaDataSave: true #Otherwise orientation is broken on iOS Safari
       disableImageResize: false
+      image_library: 2
       #previewOrientation: 0
       # imageCrop: false
       acceptFileTypes: /(\.|\/)(gif|jpe?g|png|webp|tiff|tif)$/i
