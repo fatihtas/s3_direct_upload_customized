@@ -43,7 +43,7 @@ $.fn.S3Uploader = (options) ->
       data
 
     $uploadForm.fileupload(
-      disableImageResize: false
+      disableImageResize: true
       previewMaxWidth: 236
       previewMaxHeight: 236
       # forceIframeTransport: false  ## default
