@@ -43,7 +43,6 @@ $.fn.S3Uploader = (options) ->
       data
 
     $uploadForm.fileupload(
-      disableImageResize: true
       previewMaxWidth: 236
       previewMaxHeight: 236
       # forceIframeTransport: false  ## default
@@ -58,10 +57,10 @@ $.fn.S3Uploader = (options) ->
       # https://github.com/blueimp/jQuery-File-Upload/wiki/Options -> to see options (1-8),or (boolean)
       imageOrientation: true
       disableImageMetaDataSave: true #Otherwise orientation is broken on iOS Safari
-      
+      disableImageResize: true
       #previewOrientation: 0
       # imageCrop: false
-      acceptFileTypes: /(\.|\/)(gif|jpe?g|png|webp)$/i
+      acceptFileTypes: /(\.|\/)(gif|jpe?g|png|webp|tiff|tif)$/i
       
       #### resize photos for S3 ... 
         # processQueue: [
