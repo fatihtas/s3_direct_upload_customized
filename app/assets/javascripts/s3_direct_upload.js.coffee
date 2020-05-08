@@ -55,9 +55,10 @@ $.fn.S3Uploader = (options) ->
       imageQuality: 80
       imageMaxWidth: 1600  # 1600
       imageMaxHeight: 1600 # 1600
-      # imageOrientation: "from-image"
+      # https://github.com/blueimp/jQuery-File-Upload/wiki/Options -> to see options (1-8),or (boolean)
+      imageOrientation: true
       # imageCrop: false
-      acceptFileTypes: /(\.|\/)(gif|jpe?g|png|webp)$/i
+      acceptFileTypes: /(\.|\/)(gif|jpe?g|png|webp|tiff)$/i
       
       #### resize photos for S3 ... 
         # processQueue: [
