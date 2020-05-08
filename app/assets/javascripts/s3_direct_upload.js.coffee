@@ -50,14 +50,15 @@ $.fn.S3Uploader = (options) ->
       # prependFiles: true # By default(false), files are appended to the files container. Set this option to true, to prepend files instead.
       # maxNumberOfFiles: 10   # Not working, probably this is indeed: # of data.files
       maxFileSize: 20000000
-      imageForceResize: true
+      
       imageQuality: 80
       imageMaxWidth: 1600  # 1600
       imageMaxHeight: 1600 # 1600
       # https://github.com/blueimp/jQuery-File-Upload/wiki/Options -> to see options (1-8),or (boolean)
       imageOrientation: true
       disableImageMetaDataSave: true #Otherwise orientation is broken on iOS Safari
-      #disableImageResize: true
+      disableImageResize: false
+      imageForceResize: true
       image_library: 0
       #previewOrientation: 0
       # imageCrop: false
