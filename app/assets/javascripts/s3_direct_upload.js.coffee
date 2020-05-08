@@ -58,7 +58,7 @@ $.fn.S3Uploader = (options) ->
       # https://github.com/blueimp/jQuery-File-Upload/wiki/Options -> to see options (1-8),or (boolean)
       disableImageMetaDataSave: true #Otherwise orientation is broken on iOS Safari
       imageOrientation: true
-      previewOrientation: 0
+      #previewOrientation: 0
       # imageCrop: false
       acceptFileTypes: /(\.|\/)(gif|jpe?g|png|webp|tiff)$/i
       
