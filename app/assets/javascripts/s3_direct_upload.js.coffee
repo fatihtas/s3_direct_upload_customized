@@ -55,9 +55,9 @@ $.fn.S3Uploader = (options) ->
       imageMaxWidth: 1600  # 1600
       imageMaxHeight: 1600 # 1600
       # https://github.com/blueimp/jQuery-File-Upload/wiki/Options -> to see options (1-8),or (boolean)
-      imageOrientation: true
+      #imageOrientation: true
       #disableImageMetaDataSave: true #Otherwise orientation is broken on iOS Safari
-      
+      disableImageMetaDataLoad: true
       disableImageResize: false
       imageForceResize: true
       image_library: 0
