@@ -56,12 +56,12 @@ $.fn.S3Uploader = (options) ->
       imageMaxHeight: 1600 # 1600
       imageCrop: false
       previewCrop: true
-      sequentialUploads: true
+      #sequentialUploads: true
       imageOrientation: true
       # https://github.com/blueimp/jQuery-File-Upload/wiki/Options -> to see options (1-8),or (boolean)
       disableImageMetaDataSave: true #Otherwise orientation is broken on iOS Safari
       #disableImageMetaDataLoad: true # masaustu dogru mobilde yanlis oldu
-      disableImageResize: /Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent)
+      disableImageResize: true#/Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent)
       imageForceResize: true
       image_library: 0
       #previewOrientation: 0
