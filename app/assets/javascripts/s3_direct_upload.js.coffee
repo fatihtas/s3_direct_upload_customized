@@ -5,18 +5,17 @@
 
 $ = jQuery
 
-$isOpera = ! !window.opr and ! !opr.addons or ! !window.opera or navigator.userAgent.indexOf(' OPR/') >= 0
-$isChrome = ! !window.chrome and (! !window.chrome.webstore or ! !window.chrome.runtime)
+$isOpera = !!window.opr && !!opr.addons || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0
+$isChrome = !!window.chrome && (!!window.chrome.webstore)
 $isFirefox = typeof InstallTrigger != 'undefined'
 console.log('isFirefox: ' +$isFirefox)
-$isSafari = /constructor/i.test(window.HTMLElement) or ((p) ->
+$isSafari = /constructor/i.test(window.HTMLElement) || ((p) ->
   p.toString() == '[object SafariRemoteNotification]'
-)(!window['safari'] or typeof safari != 'undefined' and safari.pushNotification)
-$isIE = false or ! !document.documentMode
-$isEdge = !$isIE and ! !window.StyleMedia
-$isEdgeChromium = $isChrome and navigator.userAgent.indexOf('Edg') != -1
-
-$isBlink = ($isChrome or $isOpera) and ! !window.CSS
+  )(!window['safari'] || typeof safari != 'undefined' && safari.pushNotification)
+$isIE = false || !!document.documentMode
+$isEdge = !$isIE && !!window.StyleMedia
+$isEdgeChromium = $isChrome && navigator.userAgent.indexOf('Edg') != -1
+$isBlink = ($isChrome or $isOpera) and !!window.CSS
 
 
 
