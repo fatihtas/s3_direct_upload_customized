@@ -5,14 +5,18 @@
 
 $ = jQuery
 
-$isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0
-$isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)
-$isFirefox = typeof InstallTrigger !== 'undefined'
-$isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification))
-$isIE = /*@cc_on!@*/false || !!document.documentMode
-$isEdge = !isIE && !!window.StyleMedia
-$isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1)
-$isBlink = (isChrome || isOpera) && !!window.CSS
+$isOpera = ! !window.opr and ! !opr.addons or ! !window.opera or navigator.userAgent.indexOf(' OPR/') >= 0
+$isChrome = ! !window.chrome and (! !window.chrome.webstore or ! !window.chrome.runtime)
+$isFirefox = typeof InstallTrigger != 'undefined'
+$isSafari = /constructor/i.test(window.HTMLElement) or ((p) ->
+  p.toString() == '[object SafariRemoteNotification]'
+)(!window['safari'] or typeof safari != 'undefined' and safari.pushNotification)
+$isIE = false or ! !document.documentMode
+$isEdge = !$isIE and ! !window.StyleMedia
+$isEdgeChromium = $isChrome and navigator.userAgent.indexOf('Edg') != -1
+
+$isBlink = ($isChrome or $isOpera) and ! !window.CSS
+
 
 
 $.fn.S3Uploader = (options) ->
