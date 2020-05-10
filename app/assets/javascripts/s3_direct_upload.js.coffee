@@ -73,12 +73,12 @@ $.fn.S3Uploader = (options) ->
       #sequentialUploads: false
       
       
-      disableImageMetaDataLoad: true #!($isFirefox || $isSafari || $isIE || $isEdge)   #!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) # masaustu dogru (exif almadik) mobilde (exif aliyoruz) yanlis olsun
-      disableImageResize: false #($isFirefox || $isSafari || $isIE || $isEdge)  # masaustu false mobilde true olsun  #/Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent)
+      #disableImageMetaDataLoad: true #!($isFirefox || $isSafari || $isIE || $isEdge)   #!/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) # masaustu dogru (exif almadik) mobilde (exif aliyoruz) yanlis olsun
+      disableImageResize: true #($isFirefox || $isSafari || $isIE || $isEdge)  # masaustu false mobilde true olsun  #/Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent)
       imageForceResize: true
-      #imageOrientation: !($isFirefox || $isSafari || $isIE || $isEdge) # masaustu false(cunku en bastan almadik exif), mobile true olsun
+      imageOrientation: true !($isFirefox || $isSafari || $isIE || $isEdge) # masaustu false(cunku en bastan almadik exif), mobile true olsun
       # https://github.com/blueimp/jQuery-File-Upload/wiki/Options -> to see options (1-8),or (boolean)
-      #disableImageMetaDataSave: !($isFirefox || $isSafari || $isIE || $isEdge)  # !/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) #Disables saving the image meta data into the resized images (masaustu true olmali sanki, mobile false).  #default false ->
+      disableImageMetaDataSave: true #!($isFirefox || $isSafari || $isIE || $isEdge)  # !/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) #Disables saving the image meta data into the resized images (masaustu true olmali sanki, mobile false).  #default false ->
       # bunu dene #Otherwise orientation is broken on iOS Safari #/Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent)
       image_library: 0
       #previewOrientation: 0
