@@ -8,6 +8,7 @@ $ = jQuery
 $isOpera = ! !window.opr and ! !opr.addons or ! !window.opera or navigator.userAgent.indexOf(' OPR/') >= 0
 $isChrome = ! !window.chrome and (! !window.chrome.webstore or ! !window.chrome.runtime)
 $isFirefox = typeof InstallTrigger != 'undefined'
+console.log('isFirefox: ' +$isFirefox)
 $isSafari = /constructor/i.test(window.HTMLElement) or ((p) ->
   p.toString() == '[object SafariRemoteNotification]'
 )(!window['safari'] or typeof safari != 'undefined' and safari.pushNotification)
