@@ -64,7 +64,7 @@ $.fn.S3Uploader = (options) ->
       imageForceResize: true
       imageOrientation: /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) # masaustu false(cunku en bastan almadik exif), mobile true olsun
       # https://github.com/blueimp/jQuery-File-Upload/wiki/Options -> to see options (1-8),or (boolean)
-      #disableImageMetaDataSave: true #Disables saving the image meta data into the resized images (masaustu true olmali sanki, mobile false).  #default false ->
+      disableImageMetaDataSave: !/iPhone|iPad|iPod|Android/i.test(navigator.userAgent) #Disables saving the image meta data into the resized images (masaustu true olmali sanki, mobile false).  #default false ->
       # bunu dene #Otherwise orientation is broken on iOS Safari #/Android(?!.*Chrome)|Opera/.test(window.navigator && navigator.userAgent)
       image_library: 0
       #previewOrientation: 0
